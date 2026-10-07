@@ -5,7 +5,12 @@ type Props = {
   dark?: boolean;
 };
 
-export default function SectionHeading({ eyebrow, title, description, dark = false }: Props) {
+export default function SectionHeading({
+  eyebrow,
+  title,
+  description,
+  dark = false,
+}: Props) {
   return (
     <div className={`section-heading ${dark ? "section-heading-dark" : ""}`}>
       {eyebrow && <div className="eyebrow">{eyebrow}</div>}

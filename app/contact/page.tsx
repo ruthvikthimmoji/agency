@@ -13,7 +13,9 @@ export default function ContactPage() {
         <div className="contact-page-content">
           <p>Have a product that&apos;s getting harder to manage?</p>
           <h1>Let&apos;s make the product make sense.</h1>
-          <a className="contact-button" href="mailto:hello@example.com">Start a conversation <ArrowUpRight size={19} /></a>
+          <a className="contact-button" href="mailto:hello@example.com">
+            Start a conversation <ArrowUpRight size={19} />
+          </a>
         </div>
       </section>
     </main>

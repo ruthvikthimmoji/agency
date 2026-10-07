@@ -6,8 +6,16 @@ const steps = [
   ["01", "Align", "Understand the product, problem, audience and constraints."],
   ["02", "Structure", "Map the experience and remove unnecessary complexity."],
   ["03", "Design", "Create the visual language and high-fidelity interface."],
-  ["04", "Systemize", "Turn repeated decisions into reusable components and patterns."],
-  ["05", "Handoff", "Deliver organized files and decisions the team can actually use."],
+  [
+    "04",
+    "Systemize",
+    "Turn repeated decisions into reusable components and patterns.",
+  ],
+  [
+    "05",
+    "Handoff",
+    "Deliver organized files and decisions the team can actually use.",
+  ],
 ] as const;
 
 export const metadata = { title: `Process — ${agency.name}` };
@@ -20,7 +28,10 @@ export default function ProcessPage() {
         <div className="section-index">01 / PROCESS</div>
         <div className="inner-hero-grid">
           <h1>Structure first. Pixels second.</h1>
-          <p>A simple process designed to reduce ambiguity, keep decisions visible and move the product forward.</p>
+          <p>
+            A simple process designed to reduce ambiguity, keep decisions
+            visible and move the product forward.
+          </p>
         </div>
       </section>
       <section className="process-page-list section-shell">
@@ -36,7 +47,9 @@ export default function ProcessPage() {
         <p className="section-index">02 / NEXT</p>
         <h2>Have a messy product?</h2>
         <p>Bring the current state. We&apos;ll work from there.</p>
-        <a className="contact-button" href="mailto:hello@example.com">Start a conversation <ArrowUpRight size={19} /></a>
+        <a className="contact-button" href="mailto:hello@example.com">
+          Start a conversation <ArrowUpRight size={19} />
+        </a>
       </section>
     </main>
   );

@@ -84,11 +84,7 @@ export default function Navbar() {
             About
           </a>
 
-          <a
-            className="mobile-nav-cta"
-            href="/contact"
-            onClick={close}
-          >
+          <a className="mobile-nav-cta" href="/contact" onClick={close}>
             Let&apos;s talk
             <ArrowUpRight size={17} />
           </a>

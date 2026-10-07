@@ -34,7 +34,9 @@ export default function ServicesPage() {
                 <p className="service-detail-short">{service.short}</p>
               </div>
               <div>
-                <p className="service-detail-description">{service.description}</p>
+                <p className="service-detail-description">
+                  {service.description}
+                </p>
                 <div className="deliverables">
                   {service.deliverables.map((item) => (
                     <div key={item}>
@@ -55,9 +57,9 @@ export default function ServicesPage() {
           <div>
             <h2>Deliberately narrow.</h2>
             <p>
-              The studio is focused on product UI, systems and audits. Development,
-              formal UX research, usability testing and product strategy consulting are
-              intentionally outside the service list.
+              The studio is focused on product UI, systems and audits.
+              Development, formal UX research, usability testing and product
+              strategy consulting are intentionally outside the service list.
             </p>
           </div>
         </div>
@@ -66,7 +68,10 @@ export default function ServicesPage() {
       <section className="inner-cta section-shell">
         <p className="section-index">03 / START</p>
         <h2>Not sure what you need?</h2>
-        <p>Send over the product, problem or current state. We can start from there.</p>
+        <p>
+          Send over the product, problem or current state. We can start from
+          there.
+        </p>
         <a className="contact-button" href="mailto:hello@example.com">
           Start a conversation <ArrowUpRight size={19} />
         </a>

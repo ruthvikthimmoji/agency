@@ -19,9 +19,18 @@ export default function AboutPage() {
         <div className="section-index">02 / THE APPROACH</div>
         <div className="about-page-copy">
           <p className="about-lead">{agency.differentiator}</p>
-          <p>Good product design is not about adding more decoration. It is about making decisions easier to understand, repeat and maintain.</p>
-          <p>The studio stays deliberately focused on product UI, design systems and UX/UI audits for founders and small product teams dealing with growing complexity.</p>
-          <a className="text-link" href="/contact">Work together <ArrowUpRight size={17} /></a>
+          <p>
+            Good product design is not about adding more decoration. It is about
+            making decisions easier to understand, repeat and maintain.
+          </p>
+          <p>
+            The studio stays deliberately focused on product UI, design systems
+            and UX/UI audits for founders and small product teams dealing with
+            growing complexity.
+          </p>
+          <a className="text-link" href="/contact">
+            Work together <ArrowUpRight size={17} />
+          </a>
         </div>
       </section>
     </main>

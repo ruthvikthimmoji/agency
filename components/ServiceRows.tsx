@@ -7,7 +7,10 @@ export default function ServiceRows() {
       {services.map((service) => (
         <a className="service-row" href="/services" key={service.number}>
           <span className="service-number">{service.number}</span>
-          <div><h3>{service.title}</h3><p>{service.description}</p></div>
+          <div>
+            <h3>{service.title}</h3>
+            <p>{service.description}</p>
+          </div>
           <span className="service-short">{service.short}</span>
           <ArrowUpRight className="service-arrow" size={22} />
         </a>
