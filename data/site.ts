@@ -1,9 +1,9 @@
 export const site = {
   name: "ROUGH.",
   shortName: "ROUGH.",
-  email: "hello@example.com",
+  email: "thiimojiruthvik@gmail.com",
   nav: [
-    { label: "Work", href: "/#work" },
+    { label: "Work", href: "/work" },
     { label: "Services", href: "/services" },
     { label: "Process", href: "/process" },
     { label: "About", href: "/about" },
@@ -46,6 +46,11 @@ export const process = [
   { number: "01", title: "Align", description: "Understand the product, problem and constraints." },
   { number: "02", title: "Structure", description: "Map the experience and remove unnecessary complexity." },
   { number: "03", title: "Design", description: "Create the visual language and high-fidelity UI." },
-  { number: "04", title: "Systemize", description: "Turn repeated decisions into reusable components." },
-  { number: "05", title: "Handoff", description: "Deliver clean files your team can actually use." },
+  { number: "04", title: "Systemize", description: "Turn repeated decisions into reusable components." }
 ] as const;
+
+export const socialLinks = [
+  { label: "LinkedIn", href: "https://www.linkedin.com/in/ruthvik-p-thimmoji/" },
+  { label: "Behance", href: "" }, // paste your Behance profile URL
+  { label: "Instagram", href: "" }, // paste your Instagram profile URL, or leave empty to hide it
+].filter((link) => link.href !== "");

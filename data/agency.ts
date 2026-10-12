@@ -1,6 +1,8 @@
 export const agency = {
   name: "ROUGH.",
   tagline: "Make the mess make sense.",
+  // Used for every email link on the site. Change it here and it changes everywhere.
+  email: "thiimojiruthvik@gmail.com",
   positioning:
     "I turn rough, inconsistent products into polished, scalable experiences — for founders done patching things together.",
   differentiator: "Untangling complexity.",
@@ -11,7 +13,13 @@ export const agency = {
       short: "Clear, polished interfaces for products moving from idea to scale.",
       description:
         "From flows and information hierarchy to high-fidelity screens, the focus is making complex product experiences feel obvious and consistent.",
-      deliverables: ["User flows", "Wireframes", "High-fidelity UI", "Responsive screens", "Developer-ready handoff"],
+      deliverables: [
+        "User flows",
+        "Wireframes",
+        "High-fidelity UI",
+        "Responsive screens",
+        "Organized Figma files with documented states and specs",
+      ],
     },
     {
       number: "02",
@@ -31,3 +39,10 @@ export const agency = {
     },
   ],
 } as const;
+
+// A link is hidden automatically while its href is an empty string.
+export const socialLinks = [
+  { label: "LinkedIn", href: "https://www.linkedin.com/in/ruthvik-p-thimmoji/" },
+  { label: "Behance", href: "" }, // paste your Behance profile URL
+  { label: "Instagram", href: "" }, // paste your Instagram profile URL, or leave empty to hide it
+].filter((link) => link.href !== "");

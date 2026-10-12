@@ -40,7 +40,7 @@ export default function Navbar() {
 
         {/* Desktop Navigation */}
         <nav className="desktop-nav" aria-label="Primary navigation">
-          <a href="#work">Work</a>
+          <a href="/#work">Work</a>
 
           <a href="/services">Services</a>
 
@@ -49,7 +49,7 @@ export default function Navbar() {
           <a href="/about">About</a>
 
           <a className="nav-cta" href="/contact">
-            Let&apos;s talk
+            Start a project
             <ArrowUpRight size={15} />
           </a>
         </nav>
@@ -68,7 +68,7 @@ export default function Navbar() {
       {/* Mobile Navigation */}
       {open && (
         <nav className="mobile-nav" aria-label="Mobile navigation">
-          <a href="#work" onClick={close}>
+          <a href="/work" onClick={close}>
             Work
           </a>
 
@@ -85,7 +85,7 @@ export default function Navbar() {
           </a>
 
           <a className="mobile-nav-cta" href="/contact" onClick={close}>
-            Let&apos;s talk
+            Start a project
             <ArrowUpRight size={17} />
           </a>
         </nav>

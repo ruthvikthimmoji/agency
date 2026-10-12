@@ -1,7 +1,8 @@
 "use client";
 
-import { ArrowUpRight, ArrowDownRight, Check } from "lucide-react";
+import { ArrowUpRight, ArrowDownRight } from "lucide-react";
 import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 
 const services = [
   {
@@ -53,7 +54,7 @@ const process = [
     number: "05",
     title: "Handoff",
     description:
-      "Prepare organized, developer-friendly designs with clear states and interaction details.",
+      "Prepare organized design files with clear states and interaction details, so your developers can build without guessing.",
   },
 ];
 
@@ -101,7 +102,7 @@ export default function Home() {
 
                 <div className="hero-actions">
                   <a className="pill-button" href="/contact">
-                    Start a conversation
+                    Start a project
                     <ArrowUpRight size={16} />
                   </a>
 
@@ -171,11 +172,11 @@ export default function Home() {
           </div>
 
           <div className="work-grid">
-            {/* SportSea placeholder */}
-            <a href="#" className="work-card">
+            {/* SportSea — not a link until the case study is live */}
+            <div className="work-card">
               <div className="work-card-top">
                 <span>01 · Product UI</span>
-                <span>Case study coming soon</span>
+                <span>Case study in progress</span>
               </div>
 
               <div className="work-card-art">
@@ -201,18 +202,14 @@ export default function Home() {
                     user, arena admin and platform admin experiences.
                   </p>
                 </div>
-
-                <span className="round-arrow">
-                  <ArrowUpRight size={18} />
-                </span>
               </div>
-            </a>
+            </div>
 
-            {/* JuzzPay placeholder */}
-            <a href="#" className="work-card work-card-dark">
+            {/* JuzzPay — concept, not a link */}
+            <div className="work-card work-card-dark">
               <div className="work-card-top">
                 <span>02 · Dashboard UI</span>
-                <span>Case study coming soon</span>
+                <span>Concept</span>
               </div>
 
               <div className="work-card-art">
@@ -238,12 +235,8 @@ export default function Home() {
                     hierarchy, data visibility and scalable UI patterns.
                   </p>
                 </div>
-
-                <span className="round-arrow">
-                  <ArrowUpRight size={18} />
-                </span>
               </div>
-            </a>
+            </div>
           </div>
 
           <div
@@ -381,34 +374,14 @@ export default function Home() {
             </h2>
 
             <a className="contact-button" href="/contact">
-              Start a conversation
+              Start a project
               <ArrowUpRight size={17} />
             </a>
           </div>
         </section>
       </main>
 
-      {/* =====================================================
-          FOOTER
-      ===================================================== */}
-
-      <footer className="section-shell footer">
-        <span> Made with Love © 2026 Agency</span>
-
-        <div>
-          <a href="https://www.linkedin.com" target="_blank">
-            LinkedIn
-          </a>
-
-          <a href="https://www.behance.net" target="_blank">
-            Behance
-          </a>
-
-          <a href="https://www.instagram.com" target="_blank">
-            Instagram
-          </a>
-        </div>
-      </footer>
+      <Footer />
     </>
   );
 }
