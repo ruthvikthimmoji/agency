@@ -3,23 +3,30 @@
 import { ArrowUpRight, ArrowDownRight } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import Faq from "@/components/Faq";
 
 const services = [
   {
     number: "01",
     title: "Product UI Design",
+    meta: "3–6 weeks",
+    startHere: false,
     description:
       "Polished interfaces for SaaS, mobile products and digital experiences — from early flows to high-fidelity screens.",
   },
   {
     number: "02",
     title: "Design Systems",
+    meta: "3–5 weeks",
+    startHere: false,
     description:
       "Reusable components, patterns and visual rules that bring consistency to products and make future design work easier.",
   },
   {
     number: "03",
     title: "UX/UI Audit",
+    meta: "3–5 days · from ₹18,000 / $300",
+    startHere: true,
     description:
       "A focused review of your existing product to identify interface friction, inconsistencies and opportunities to improve.",
   },
@@ -96,8 +103,8 @@ export default function Home() {
 
               <div className="hero-copy">
                 <p>
-                  Product UI, design systems and UX/UI audits for founders
-                  and teams who have outgrown patchwork design.
+                  Product UI, design systems and UX/UI audits for founders and
+                  teams who have outgrown patchwork design.
                 </p>
 
                 <div className="hero-actions">
@@ -132,8 +139,8 @@ export default function Home() {
 
           <div>
             <p className="statement-large">
-              Good products get messy when the interface grows faster than
-              the system behind it.
+              Good products get messy when the interface grows faster than the
+              system behind it.
             </p>
 
             <div className="problem-list">
@@ -268,18 +275,18 @@ export default function Home() {
                   <span className="service-number">{service.number}</span>
 
                   <div>
-                    <h3>{service.title}</h3>
+                    <h3>
+                      {service.title}
+                      {service.startHere && (
+                        <span className="start-here">Start here</span>
+                      )}
+                    </h3>
                     <p>{service.description}</p>
                   </div>
 
-                  <span className="service-short">
-                    Design
-                  </span>
+                  <span className="service-short">{service.meta}</span>
 
-                  <ArrowUpRight
-                    className="service-arrow"
-                    size={20}
-                  />
+                  <ArrowUpRight className="service-arrow" size={20} />
                 </div>
               ))}
             </div>
@@ -303,8 +310,8 @@ export default function Home() {
 
               <p>
                 No bloated process. Just enough structure to understand the
-                problem, make the right decisions and create something that
-                can actually scale.
+                problem, make the right decisions and create something that can
+                actually scale.
               </p>
             </div>
 
@@ -322,6 +329,8 @@ export default function Home() {
           </div>
         </section>
 
+          <Faq limit={5} />
+
         {/* =====================================================
             ABOUT
         ===================================================== */}
@@ -334,9 +343,7 @@ export default function Home() {
 
             <div className="about-section-main">
               <div className="about-section-heading">
-                <h2>
-                  A small studio with a big bias toward clarity.
-                </h2>
+                <h2>A small studio with a big bias toward clarity.</h2>
               </div>
 
               <div className="about-section-copy">
@@ -363,9 +370,7 @@ export default function Home() {
           <div className="section-shell">
             <div className="contact-label">Have a messy product?</div>
 
-            <p className="contact-pretitle">
-              Let&apos;s make it make sense.
-            </p>
+            <p className="contact-pretitle">Let&apos;s make it make sense.</p>
 
             <h2>
               Let&apos;s build

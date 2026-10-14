@@ -3,11 +3,11 @@ import { agency, socialLinks } from "@/data/agency";
 export default function Footer() {
   return (
     <footer className="section-shell footer">
-      <span>
-        Made with Love © 2026 {agency.name}
-      </span>
+      <span>Made with Love © 2026 {agency.name}</span>
 
       <div>
+        <a href="/privacy">Privacy</a>
+
         {socialLinks.map((link) => (
           <a
             key={link.label}

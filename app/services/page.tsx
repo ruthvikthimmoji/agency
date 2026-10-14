@@ -2,6 +2,7 @@ import { ArrowUpRight, Check } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { agency } from "@/data/agency";
+  import Faq from "@/components/Faq";
 
 export const metadata = {
   // The layout adds " | ROUGH." automatically
@@ -29,7 +30,12 @@ export default function ServicesPage() {
             <article className="service-detail" key={service.number}>
               <div className="service-detail-top">
                 <span className="section-index">{service.number}</span>
-                <span className="service-detail-kicker">{service.title}</span>
+                <span className="service-detail-kicker">
+                  {service.startHere && (
+                    <span className="start-here">Start here</span>
+                  )}
+                  {service.title}
+                </span>
               </div>
 
               <div className="service-detail-grid">
@@ -41,6 +47,18 @@ export default function ServicesPage() {
                   <p className="service-detail-description">
                     {service.description}
                   </p>
+
+                  <dl className="service-meta">
+                    <div>
+                      <dt>Timeline</dt>
+                      <dd>{service.timeline}</dd>
+                    </div>
+                    <div>
+                      <dt>Investment</dt>
+                      <dd>{service.investment}</dd>
+                    </div>
+                  </dl>
+
                   <div className="deliverables">
                     {service.deliverables.map((item) => (
                       <div key={item}>
@@ -64,10 +82,16 @@ export default function ServicesPage() {
                 I don&apos;t offer development, formal UX research, usability
                 testing or product strategy consulting. Doing fewer things
                 properly is the point.
+                <br />
+                <br />
+                Design only. Organized files your developers can build from.
               </p>
             </div>
           </div>
         </section>
+
+       <Faq />
+
 
         <section className="inner-cta section-shell">
           <p className="section-index">03 / START</p>

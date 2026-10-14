@@ -76,18 +76,12 @@ button {
   height: 64px !important;
   margin: 0 !important;
   padding: 0 !important;
-
   display: block !important;
-
   border: 1px solid transparent !important;
   border-radius: 18px !important;
-
   background: transparent !important;
-
   z-index: 9999 !important;
-
   box-shadow: none !important;
-
   transition:
     background 300ms ease,
     border-color 300ms ease,
@@ -98,15 +92,12 @@ button {
 .site-nav-inner {
   width: 100% !important;
   height: 64px !important;
-
   margin: 0 auto !important;
   padding: 0 12px 0 20px !important;
-
   display: flex !important;
   flex-direction: row !important;
   align-items: center !important;
   justify-content: space-between !important;
-
   gap: 20px !important;
 }
 
@@ -114,10 +105,8 @@ button {
   display: inline-flex !important;
   flex: 0 0 auto !important;
   align-items: baseline !important;
-
   margin: 0 !important;
   padding: 0 !important;
-
   font-size: 21px !important;
   line-height: 1 !important;
   font-weight: 900;
@@ -138,14 +127,10 @@ button {
   flex-direction: row !important;
   align-items: center !important;
   justify-content: flex-end !important;
-
   gap: 30px !important;
-
   margin: 0 !important;
   padding: 0 !important;
-
   flex: 0 0 auto !important;
-
   font-size: 13px !important;
   font-weight: 700;
 }
@@ -170,24 +155,19 @@ button {
 .contact-button {
   position: relative;
   overflow: hidden;
-
   display: inline-flex;
   align-items: center;
   gap: 7px;
-
   background: var(--ink);
   color: var(--bg);
-
   border-radius: 999px;
 }
 
 .site-nav .nav-cta {
   min-height: 42px !important;
   padding: 0 18px !important;
-
   align-items: center !important;
   justify-content: center !important;
-
   white-space: nowrap !important;
 }
 
@@ -195,15 +175,11 @@ button {
 .pill-button::before,
 .contact-button::before {
   content: "";
-
   position: absolute;
   inset: 0;
-
   background: var(--accent);
-
   transform: translateY(102%);
   transition: transform 0.28s cubic-bezier(0.22, 1, 0.36, 1);
-
   z-index: 0;
 }
 
@@ -228,23 +204,18 @@ button {
 
 .site-nav-scrolled {
   background: rgba(250, 249, 246, 0.78) !important;
-
   border-color: rgba(17, 17, 17, 0.1) !important;
-
   box-shadow:
     0 10px 35px rgba(0, 0, 0, 0.07),
     0 2px 10px rgba(0, 0, 0, 0.04) !important;
-
   backdrop-filter: blur(20px) saturate(140%) !important;
   -webkit-backdrop-filter: blur(20px) saturate(140%) !important;
 }
 
 .menu-button {
   display: none;
-
   border: 0;
   background: transparent;
-
   cursor: pointer;
 }
 
@@ -279,19 +250,12 @@ button {
 
 .hero {
   /*
-    Navbar:
-    top: 16px
-    height: 64px
-
-    We give the hero enough top breathing room so the
-    fixed navbar never visually overlaps the opening content.
+    Navbar: top 16px, height 64px.
+    Enough top room so the fixed navbar never overlaps the opening content.
   */
-
   min-height: 100vh;
-
   padding-top: 190px;
   padding-bottom: 28px;
-
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -300,9 +264,7 @@ button {
 .hero-inner {
   width: min(1400px, calc(100% - 48px));
   min-height: calc(100vh - 218px);
-
   margin-inline: auto;
-
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -314,13 +276,8 @@ button {
 
 .hero-grid {
   display: grid;
-
-  grid-template-columns:
-    minmax(0, 1.55fr)
-    minmax(280px, 0.45fr);
-
+  grid-template-columns: minmax(0, 1.55fr) minmax(280px, 0.45fr);
   gap: 48px;
-
   align-items: end;
 }
 
@@ -330,13 +287,9 @@ button {
 
 .hero h1 {
   margin: 0;
-
   font-size: clamp(76px, 12.8vw, 190px);
-
   line-height: 0.79;
-
   letter-spacing: -0.095em;
-
   font-weight: 900;
 }
 
@@ -347,64 +300,47 @@ button {
 
 .hero h1 span::after {
   content: "";
-
   position: absolute;
-
   width: 0.3em;
   height: 0.3em;
-
   right: 0.02em;
   bottom: -0.03em;
-
   background: var(--accent);
-
   border-radius: 50%;
-
   z-index: -1;
 }
 
 .hero-mark {
   position: absolute;
-
   right: 2%;
   top: 8%;
-
   font-size: 44px;
   font-weight: 300;
-
   color: #bdb9af;
-
   transform: rotate(18deg);
 }
 
 .hero-copy {
   padding-bottom: 7px;
-
   max-width: 380px;
 }
 
 .hero-copy p {
   margin: 0 0 28px;
-
   font-size: 18px;
   line-height: 1.35;
-
   letter-spacing: -0.025em;
 }
 
 .hero-actions {
   display: flex;
-
   flex-wrap: wrap;
-
   align-items: center;
-
   gap: 18px;
 }
 
 .pill-button {
   padding: 11px 15px;
-
   transition:
     transform 0.2s ease,
     background 0.2s ease;
@@ -417,18 +353,12 @@ button {
 
 .text-link {
   display: inline-flex;
-
   align-items: center;
-
   gap: 8px;
-
   font-size: 13px;
   font-weight: 800;
-
   border-bottom: 1px solid var(--ink);
-
   padding-bottom: 5px;
-
   transition: gap 0.2s ease;
 }
 
@@ -438,13 +368,9 @@ button {
 
 .hero-bottom {
   display: flex;
-
   justify-content: space-between;
-
   color: var(--muted);
-
   padding-top: 20px;
-
   border-top: 1px solid var(--line);
 }
 
@@ -455,25 +381,17 @@ button {
 .statement {
   padding-top: 140px;
   padding-bottom: 180px;
-
   display: grid;
-
   grid-template-columns: 1fr 3fr;
-
   gap: 48px;
 }
 
 .statement-large {
   max-width: 850px;
-
   margin: -10px 0 80px;
-
   font-size: clamp(38px, 5.6vw, 76px);
-
   line-height: 0.95;
-
   letter-spacing: -0.065em;
-
   font-weight: 800;
 }
 
@@ -483,18 +401,12 @@ button {
 
 .problem-list div {
   display: flex;
-
   justify-content: space-between;
-
   align-items: center;
-
   padding: 20px 0;
-
   border-bottom: 1px solid var(--line);
-
   font-size: 18px;
   font-weight: 700;
-
   transition: padding 0.2s ease;
 }
 
@@ -517,15 +429,9 @@ button {
 
 .section-heading {
   display: grid;
-
-  grid-template-columns:
-    minmax(0, 1.2fr)
-    minmax(260px, 0.8fr);
-
+  grid-template-columns: minmax(0, 1.2fr) minmax(260px, 0.8fr);
   gap: 32px;
-
   align-items: end;
-
   margin-bottom: 56px;
 }
 
@@ -539,11 +445,8 @@ button {
 
 .section-heading p {
   margin: 0;
-
   max-width: 440px;
-
   color: var(--muted);
-
   line-height: 1.7;
 }
 
@@ -553,70 +456,61 @@ button {
 
 .work-grid {
   display: grid;
-
   grid-template-columns: repeat(2, minmax(0, 1fr));
-
   gap: 20px;
 }
 
 .work-card {
   display: block;
-
   padding: 24px;
-
   min-height: 620px;
-
   border: 1px solid rgba(17, 17, 17, 0.12);
-
   transition:
     transform 0.35s ease,
     border-color 0.35s ease;
-
   overflow: hidden;
 }
 
 .work-card:hover {
   transform: translateY(-6px);
+  border-color: #111;
+}
 
+/* Work cards that are plain <div>s (not links yet) should not lift on hover */
+div.work-card:hover {
+  transform: none;
+  border-color: rgba(17, 17, 17, 0.12);
+}
+
+div.work-card.work-card-dark:hover {
   border-color: #111;
 }
 
 .work-card-dark {
   background: #111;
-
   color: #fff;
-
   border-color: #111;
 }
 
 .work-card-top,
 .work-card-bottom {
   display: flex;
-
   justify-content: space-between;
-
   gap: 24px;
 }
 
 .work-card-top {
   font-size: 11px;
-
   text-transform: uppercase;
-
   letter-spacing: 0.08em;
-
   opacity: 0.58;
 }
 
 .work-card-art {
   position: relative;
-
   height: 390px;
-
   margin: 32px 0;
-
   overflow: hidden;
-
   background: #e9e6df;
 }
 
@@ -626,58 +520,39 @@ button {
 
 .mock-window {
   position: absolute;
-
   inset: 13% 10% 10%;
-
   border: 1px solid rgba(17, 17, 17, 0.14);
-
   background: #f7f5f0;
-
   padding: 18px;
-
   display: flex;
-
   gap: 7px;
-
   align-items: flex-start;
 }
 
 .work-card-dark .mock-window {
   background: #161616;
-
   border-color: #444;
 }
 
 .mock-window span {
   width: 7px;
   height: 7px;
-
   border-radius: 50%;
-
   background: #999;
 }
 
 .mock-panel {
   position: absolute;
-
   left: 23%;
   right: 12%;
   bottom: 15%;
-
   height: 46%;
-
   padding: 18px;
-
   background: #fff;
-
   display: grid;
-
   grid-template-columns: repeat(2, 1fr);
-
   gap: 8px;
-
   box-shadow: 0 18px 50px rgba(0, 0, 0, 0.12);
-
   transform: rotate(-3deg);
 }
 
@@ -687,7 +562,6 @@ button {
 
 .mock-panel i {
   display: block;
-
   background: #d8d5cf;
 }
 
@@ -697,34 +571,24 @@ button {
 
 .work-card-bottom h3 {
   margin: 0 0 10px;
-
   font-size: 30px;
 }
 
 .work-card-bottom p {
   margin: 0;
-
   max-width: 460px;
-
   opacity: 0.65;
-
   line-height: 1.55;
 }
 
 .round-arrow {
   width: 42px;
   height: 42px;
-
   border: 1px solid currentColor;
-
   border-radius: 50%;
-
   display: grid;
-
   place-items: center;
-
   flex: none;
-
   transition: transform 0.3s ease;
 }
 
@@ -734,9 +598,7 @@ button {
 
 .micro-note {
   color: var(--muted);
-
   font-size: 11px;
-
   font-weight: 800;
 }
 
@@ -746,11 +608,8 @@ button {
 
 .services {
   padding-bottom: 170px;
-
   display: grid;
-
   grid-template-columns: 1fr 3fr;
-
   gap: 48px;
 }
 
@@ -760,25 +619,13 @@ button {
 
 .service-row {
   min-height: 150px;
-
   display: grid;
-
-  grid-template-columns:
-    70px
-    1fr
-    220px
-    30px;
-
+  grid-template-columns: 70px 1fr 220px 30px;
   gap: 24px;
-
   align-items: center;
-
   padding: 30px 0;
-
   border-bottom: 1px solid rgba(17, 17, 17, 0.16);
-
   color: inherit;
-
   transition:
     padding 0.3s ease,
     background 0.2s ease;
@@ -787,40 +634,31 @@ button {
 .service-row:hover {
   padding-left: 12px;
   padding-right: 12px;
-
   background: #f0ede5;
 }
 
 .service-number,
 .service-short {
   font-size: 11px;
-
   text-transform: uppercase;
-
   letter-spacing: 0.08em;
-
   opacity: 0.5;
 }
 
 .service-row h3 {
   margin: 0 0 7px;
-
   font-size: 25px;
 }
 
 .service-row p {
   margin: 0;
-
   max-width: 620px;
-
   color: #666;
-
   line-height: 1.55;
 }
 
 .service-arrow {
   justify-self: end;
-
   transition: transform 0.3s ease;
 }
 
@@ -834,15 +672,12 @@ button {
 
 .process {
   background: var(--ink);
-
   color: var(--bg);
 }
 
 .process-inner {
   width: min(1400px, calc(100% - 48px));
-
   margin-inline: auto;
-
   padding: 150px 0;
 }
 
@@ -852,49 +687,35 @@ button {
 
 .process-intro {
   display: grid;
-
   grid-template-columns: 1fr 1fr;
-
   gap: 48px;
-
   margin: 80px 0 100px;
 }
 
 .process-intro h2 {
   margin: 0;
-
   font-size: clamp(54px, 7vw, 96px);
-
   line-height: 0.88;
-
   letter-spacing: -0.07em;
 }
 
 .process-intro p {
   color: #929088;
-
   max-width: 330px;
-
   font-size: 17px;
-
   line-height: 1.4;
 }
 
 .process-grid {
   display: grid;
-
   grid-template-columns: repeat(5, 1fr);
-
   border-top: 1px solid #383832;
 }
 
 .process-item {
   padding: 24px 20px 0 0;
-
   border-right: 1px solid #383832;
-
   min-height: 260px;
-
   transition:
     transform 0.3s ease,
     border-color 0.3s ease;
@@ -914,29 +735,21 @@ button {
 
 .process-item span {
   color: #77756f;
-
   font-size: 11px;
-
   font-weight: 800;
 }
 
 .process-item h3 {
   margin: 65px 0 14px;
-
   font-size: 25px;
-
   letter-spacing: -0.04em;
 }
 
 .process-item p {
   margin: 0;
-
   color: #85837d;
-
   line-height: 1.45;
-
   font-size: 14px;
-
   max-width: 190px;
 }
 
@@ -947,53 +760,37 @@ button {
 .about {
   padding-top: 170px;
   padding-bottom: 170px;
-
   display: grid;
-
   grid-template-columns: 1fr 3fr;
-
   gap: 48px;
 }
 
 .about-grid {
   display: grid;
-
   grid-template-columns: 1fr 1fr;
-
   gap: 80px;
 }
 
 .about-kicker {
   margin: 0 0 22px;
-
   color: var(--muted);
-
   font-size: 11px;
-
   font-weight: 800;
-
   letter-spacing: 0.1em;
 }
 
 .about h2 {
   margin: 0;
-
   font-size: clamp(44px, 5vw, 70px);
-
   line-height: 0.92;
-
   letter-spacing: -0.065em;
 }
 
 .about-copy p {
   margin: 0 0 28px;
-
   max-width: 450px;
-
   color: var(--muted);
-
   font-size: 17px;
-
   line-height: 1.5;
 }
 
@@ -1003,17 +800,13 @@ button {
 
 .about-section {
   background: var(--bg);
-
   border-top: 1px solid var(--line);
 }
 
 .about-section-grid {
   display: grid;
-
   grid-template-columns: 180px minmax(0, 1fr);
-
   gap: 64px;
-
   padding-top: 140px;
   padding-bottom: 140px;
 }
@@ -1024,27 +817,17 @@ button {
 
 .about-section-main {
   display: grid;
-
-  grid-template-columns:
-    minmax(0, 1.4fr)
-    minmax(280px, 0.6fr);
-
+  grid-template-columns: minmax(0, 1.4fr) minmax(280px, 0.6fr);
   gap: 100px;
-
   align-items: start;
 }
 
 .about-section-heading h2 {
   margin: 0;
-
   max-width: 760px;
-
   font-size: clamp(48px, 6vw, 88px);
-
   line-height: 0.94;
-
   letter-spacing: -0.065em;
-
   font-weight: 500;
 }
 
@@ -1054,57 +837,43 @@ button {
 
 .about-section-copy p {
   margin: 0 0 36px;
-
   max-width: 400px;
-
   color: var(--muted);
-
   font-size: 17px;
-
   line-height: 1.55;
 }
 
 .about-section-copy .text-link {
   display: inline-flex;
-
   align-items: center;
-
   gap: 8px;
 }
 
 /* =========================================================
-   CONTACT
+   CONTACT (HOME CTA)
    ========================================================= */
 
 .contact {
   padding: 130px 0 160px;
-
   border-top: 1px solid var(--line);
-
   text-align: center;
 }
 
 .contact-label {
   color: var(--muted);
-
   margin-bottom: 40px;
 }
 
 .contact-pretitle {
   color: var(--muted);
-
   font-size: 14px;
-
   margin: 0 0 24px;
 }
 
 .contact h2 {
   margin: 0 auto 48px;
-
   font-size: clamp(64px, 10vw, 150px);
-
   line-height: 0.82;
-
   letter-spacing: -0.09em;
 }
 
@@ -1114,11 +883,8 @@ button {
 
 .contact-button {
   padding: 17px 23px;
-
   font-size: 14px;
-
   font-weight: 800;
-
   transition: transform 0.2s ease;
 }
 
@@ -1132,36 +898,25 @@ button {
 
 .footer {
   display: flex;
-
   justify-content: space-between;
-
   gap: 24px;
-
   padding-top: 28px;
   padding-bottom: 28px;
-
   border-top: 1px solid var(--line);
-
   color: var(--muted);
-
   font-size: 12px;
-
   text-transform: uppercase;
-
   letter-spacing: 0.06em;
 }
 
 .footer div {
   display: flex;
-
   gap: 22px;
 }
 
 .footer a {
   color: var(--ink);
-
   opacity: 0.65;
-
   transition: opacity 0.2s ease;
 }
 
@@ -1180,37 +935,25 @@ button {
 
 .inner-hero-grid {
   display: grid;
-
   grid-template-columns: 1.55fr 0.45fr;
-
   gap: 48px;
-
   margin-top: 70px;
-
   align-items: end;
 }
 
 .inner-hero h1 {
   margin: 0;
-
   max-width: 920px;
-
   font-size: clamp(58px, 8.2vw, 118px);
-
   line-height: 0.86;
-
   letter-spacing: -0.08em;
 }
 
 .inner-hero-grid > p {
   margin: 0 0 5px;
-
   max-width: 380px;
-
   color: var(--muted);
-
   font-size: 18px;
-
   line-height: 1.4;
 }
 
@@ -1220,71 +963,50 @@ button {
 
 .service-detail {
   padding: 34px 0 90px;
-
   border-bottom: 1px solid var(--line);
 }
 
 .service-detail-top {
   display: flex;
-
   justify-content: space-between;
-
   gap: 20px;
 }
 
 .service-detail-kicker {
   font-size: 11px;
-
   font-weight: 800;
-
   letter-spacing: 0.08em;
-
   text-transform: uppercase;
-
   color: var(--muted);
 }
 
 .service-detail-grid {
   display: grid;
-
   grid-template-columns: 1.05fr 0.95fr;
-
   gap: 90px;
-
   margin-top: 70px;
 }
 
 .service-detail h2 {
   margin: 0 0 22px;
-
   font-size: clamp(42px, 5.5vw, 76px);
-
   line-height: 0.9;
-
   letter-spacing: -0.07em;
 }
 
 .service-detail-short {
   margin: 0;
-
   max-width: 520px;
-
   font-size: 22px;
-
   line-height: 1.25;
-
   letter-spacing: -0.03em;
 }
 
 .service-detail-description {
   margin: 0 0 34px;
-
   max-width: 500px;
-
   color: var(--muted);
-
   font-size: 16px;
-
   line-height: 1.55;
 }
 
@@ -1294,17 +1016,11 @@ button {
 
 .deliverables div {
   display: flex;
-
   align-items: center;
-
   gap: 12px;
-
   padding: 15px 0;
-
   border-bottom: 1px solid var(--line);
-
   font-size: 14px;
-
   font-weight: 700;
 }
 
@@ -1314,17 +1030,13 @@ button {
 
 .service-boundary {
   background: var(--ink);
-
   color: var(--bg);
 }
 
 .service-boundary-inner {
   padding: 130px 0;
-
   display: grid;
-
   grid-template-columns: 1fr 3fr;
-
   gap: 48px;
 }
 
@@ -1334,47 +1046,34 @@ button {
 
 .service-boundary h2 {
   margin: 0 0 22px;
-
   font-size: clamp(52px, 7vw, 100px);
-
   line-height: 0.88;
-
   letter-spacing: -0.075em;
 }
 
 .service-boundary p {
   margin: 0;
-
   max-width: 520px;
-
   color: #96938a;
-
   font-size: 17px;
-
   line-height: 1.5;
 }
 
 .inner-cta {
   padding: 140px 0 160px;
-
   text-align: center;
 }
 
 .inner-cta h2 {
   margin: 50px 0 20px;
-
   font-size: clamp(54px, 7vw, 100px);
-
   line-height: 0.88;
-
   letter-spacing: -0.075em;
 }
 
 .inner-cta > p:not(.section-index) {
   margin: 0 auto 38px;
-
   color: var(--muted);
-
   font-size: 17px;
 }
 
@@ -1388,35 +1087,24 @@ button {
 
 .process-page-item {
   display: grid;
-
   grid-template-columns: 90px 1fr 1fr;
-
   gap: 30px;
-
   align-items: baseline;
-
   padding: 34px 0 45px;
-
   border-bottom: 1px solid var(--line);
 }
 
 .process-page-item h2 {
   margin: 0;
-
   font-size: clamp(38px, 5vw, 68px);
-
   line-height: 0.9;
-
   letter-spacing: -0.065em;
 }
 
 .process-page-item p {
   margin: 0;
-
   max-width: 360px;
-
   color: var(--muted);
-
   line-height: 1.5;
 }
 
@@ -1426,11 +1114,8 @@ button {
 
 .about-page {
   padding: 120px 0 170px;
-
   display: grid;
-
   grid-template-columns: 1fr 3fr;
-
   gap: 48px;
 }
 
@@ -1440,25 +1125,17 @@ button {
 
 .about-page-copy p {
   max-width: 650px;
-
   margin: 0 0 28px;
-
   color: var(--muted);
-
   font-size: 19px;
-
   line-height: 1.5;
 }
 
 .about-page-copy .about-lead {
   color: var(--ink);
-
   font-size: clamp(42px, 6vw, 78px);
-
   line-height: 0.92;
-
   letter-spacing: -0.07em;
-
   font-weight: 800;
 }
 
@@ -1468,14 +1145,10 @@ button {
 
 .contact-page {
   min-height: calc(100vh - 78px);
-
   padding-top: 110px;
   padding-bottom: 130px;
-
   display: grid;
-
   grid-template-columns: 1fr 3fr;
-
   gap: 48px;
 }
 
@@ -1485,22 +1158,161 @@ button {
 
 .contact-page-content > p {
   margin: 0 0 25px;
-
   color: var(--muted);
-
   font-size: 16px;
 }
 
 .contact-page h1 {
   max-width: 1000px;
-
   margin: 0 0 50px;
-
   font-size: clamp(62px, 9vw, 140px);
-
   line-height: 0.82;
+  letter-spacing: -0.07em;
+  font-variant-ligatures: none;
+}
 
-  letter-spacing: -0.09em;
+/* =========================================================
+   CONTACT FORM
+   ========================================================= */
+
+.contact-page-content h1 {
+  margin-bottom: 28px;
+}
+
+.contact-page-content .contact-intro {
+  max-width: 520px;
+  margin-bottom: 56px;
+}
+
+.contact-form {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 28px 32px;
+  max-width: 900px;
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.form-field-wide {
+  grid-column: 1 / -1;
+}
+
+.form-field label {
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.form-field input,
+.form-field textarea,
+.form-field select {
+  width: 100%;
+  padding: 12px 0;
+  border: 0;
+  border-bottom: 1px solid var(--line);
+  border-radius: 0;
+  background: transparent;
+  color: var(--ink);
+  font: inherit;
+  font-size: 16px;
+  transition: border-color 0.2s ease;
+}
+
+.form-field textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.form-field input:focus,
+.form-field textarea:focus,
+.form-field select:focus {
+  border-bottom-color: var(--ink);
+}
+
+.form-honeypot {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.form-actions {
+  grid-column: 1 / -1;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 24px;
+  margin-top: 8px;
+}
+
+.contact-form .contact-button {
+  border: 0;
+  cursor: pointer;
+}
+
+.contact-form .contact-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.form-note {
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.form-error {
+  margin: 0;
+  color: #a3271f;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.form-error a {
+  text-decoration: underline;
+}
+
+.form-success {
+  max-width: 620px;
+  padding: 36px 0;
+  border-top: 1px solid var(--ink);
+}
+
+.form-success h2 {
+  margin: 0 0 12px;
+  font-size: clamp(40px, 5vw, 64px);
+  line-height: 0.95;
+  letter-spacing: -0.07em;
+}
+
+.form-success p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 17px;
+  line-height: 1.5;
+}
+
+.contact-page-content .contact-fallback {
+  margin: 48px 0 0;
+  font-size: 14px;
+}
+
+.contact-fallback a {
+  color: var(--ink);
+  text-decoration: underline;
+}
+
+@media (max-width: 700px) {
+  .contact-form {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* =========================================================
@@ -1562,17 +1374,13 @@ button {
     top: 10px !important;
     left: 10px !important;
     right: 10px !important;
-
     width: calc(100% - 20px) !important;
-
     height: 60px !important;
-
     border-radius: 16px !important;
   }
 
   .site-nav-inner {
     height: 60px !important;
-
     padding: 0 8px 0 16px !important;
   }
 
@@ -1582,64 +1390,42 @@ button {
 
   .site-nav .menu-button {
     display: flex !important;
-
     width: 44px !important;
     height: 44px !important;
-
     align-items: center !important;
     justify-content: center !important;
-
     border: 0 !important;
-
     border-radius: 999px !important;
-
     background: var(--ink) !important;
-
     color: var(--bg) !important;
-
     cursor: pointer !important;
   }
 
   .site-nav .mobile-nav {
     position: absolute !important;
-
     top: calc(100% + 8px) !important;
-
     left: 0 !important;
     right: 0 !important;
-
     display: flex !important;
-
     flex-direction: column !important;
-
     gap: 4px !important;
-
     padding: 18px !important;
-
     border: 1px solid rgba(17, 17, 17, 0.1) !important;
-
     border-radius: 16px !important;
-
     background: rgba(250, 249, 246, 0.94) !important;
-
     box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1) !important;
-
     backdrop-filter: blur(24px) !important;
-
     -webkit-backdrop-filter: blur(24px) !important;
   }
 
   .mobile-nav a {
     padding: 16px 0;
-
     border-bottom: 1px solid var(--line);
-
     font-weight: 800;
   }
 
   .mobile-nav-cta {
     display: flex;
-
     justify-content: space-between;
   }
 
@@ -1647,28 +1433,18 @@ button {
 
   .hero {
     min-height: 100svh;
-
-    /*
-      IMPORTANT:
-      The old value was 52px on mobile.
-      That caused the hero to sit directly underneath
-      the fixed navbar.
-    */
-
+    /* The old value was 52px on mobile, which put the hero directly under the fixed navbar. */
     padding-top: 140px;
-
     padding-bottom: 24px;
   }
 
   .hero-inner {
     width: min(100% - 40px, 1400px);
-
     min-height: calc(100svh - 164px);
   }
 
   .hero-grid {
     grid-template-columns: 1fr;
-
     gap: 40px;
   }
 
@@ -1687,7 +1463,6 @@ button {
   .services,
   .about {
     grid-template-columns: 1fr;
-
     gap: 32px;
   }
 
@@ -1716,7 +1491,6 @@ button {
   .process-intro,
   .about-grid {
     grid-template-columns: 1fr;
-
     gap: 30px;
   }
 
@@ -1732,7 +1506,6 @@ button {
 
   .service-row {
     grid-template-columns: 38px 1fr 24px;
-
     gap: 12px;
   }
 
@@ -1744,16 +1517,13 @@ button {
 
   .about-section-grid {
     grid-template-columns: 1fr;
-
     gap: 36px;
-
     padding-top: 110px;
     padding-bottom: 110px;
   }
 
   .about-section-main {
     grid-template-columns: 1fr 0.7fr;
-
     gap: 60px;
   }
 
@@ -1763,13 +1533,11 @@ button {
   .service-detail-grid,
   .service-boundary-inner {
     grid-template-columns: 1fr;
-
     gap: 35px;
   }
 
   .inner-hero {
     padding-top: 80px;
-
     padding-bottom: 110px;
   }
 
@@ -1791,7 +1559,6 @@ button {
   .about-page,
   .contact-page {
     grid-template-columns: 1fr;
-
     gap: 30px;
   }
 
@@ -1802,7 +1569,6 @@ button {
   .about-page,
   .contact-page {
     padding-top: 80px;
-
     padding-bottom: 100px;
   }
 }
@@ -1820,28 +1586,16 @@ button {
 
   .hero {
     min-height: 100svh;
-
-    /*
-      Fixed navbar:
-      top = 10px
-      height = 60px
-
-      120px gives the opening content a comfortable
-      visual distance from the navbar.
-    */
-
+    /* Fixed navbar: top 10px + height 60px. 120px gives comfortable distance. */
     padding-top: 120px;
-
     padding-bottom: 20px;
   }
 
-  
-.hero-inner {
-  width: min(100% - 32px, 1400px);
-  min-height: auto;
-  gap: 48px;
-}
-
+  .hero-inner {
+    width: min(100% - 32px, 1400px);
+    min-height: auto;
+    gap: 48px;
+  }
 
   .hero h1 {
     font-size: clamp(64px, 18vw, 105px);
@@ -1853,15 +1607,12 @@ button {
 
   .hero-bottom {
     gap: 20px;
-
     flex-direction: column;
   }
 
   .hero-mark {
     right: 0;
-
     top: -20px;
-
     font-size: 32px;
   }
 
@@ -1869,19 +1620,16 @@ button {
 
   .statement {
     padding-top: 100px;
-
     padding-bottom: 120px;
   }
 
   .statement-large {
     margin-bottom: 60px;
-
     font-size: clamp(38px, 11vw, 60px);
   }
 
   .problem-list div {
     font-size: 16px;
-
     padding: 18px 0;
   }
 
@@ -1893,13 +1641,11 @@ button {
 
   .work-card {
     min-height: auto;
-
     padding: 22px;
   }
 
   .work-card-art {
     height: 300px;
-
     margin: 26px 0;
   }
 
@@ -1919,9 +1665,7 @@ button {
 
   .service-row {
     grid-template-columns: 35px 1fr 20px;
-
     gap: 10px;
-
     padding: 24px 0;
   }
 
@@ -1933,7 +1677,6 @@ button {
 
   .process-inner {
     padding-top: 100px;
-
     padding-bottom: 100px;
   }
 
@@ -1959,27 +1702,22 @@ button {
   .about,
   .contact {
     padding-top: 100px;
-
     padding-bottom: 110px;
   }
 
   .about-section-grid {
     gap: 40px;
-
     padding-top: 90px;
-
     padding-bottom: 90px;
   }
 
   .about-section-main {
     grid-template-columns: 1fr;
-
     gap: 40px;
   }
 
   .about-section-heading h2 {
     font-size: clamp(44px, 12vw, 64px);
-
     line-height: 0.96;
   }
 
@@ -2007,7 +1745,6 @@ button {
 
   .inner-hero {
     padding-top: 60px;
-
     padding-bottom: 90px;
   }
 
@@ -2061,9 +1798,176 @@ button {
   *::before,
   *::after {
     animation-duration: 0.01ms !important;
-
     animation-iteration-count: 1 !important;
-
     transition-duration: 0.01ms !important;
   }
+}
+/* =========================================================
+   START-HERE TAG + SERVICE META
+   ========================================================= */
+
+.start-here {
+  display: inline-block;
+  margin-right: 10px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: var(--accent);
+  color: var(--ink);
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  vertical-align: middle;
+}
+
+.service-row .start-here {
+  margin: 0 0 0 12px;
+}
+
+.service-meta {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+  margin: 0 0 28px;
+  padding-top: 20px;
+  border-top: 1px solid var(--line);
+}
+
+.service-meta div {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.service-meta dt {
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.service-meta dd {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+/* =========================================================
+   FAQ
+   ========================================================= */
+
+.faq {
+  padding-top: 120px;
+  padding-bottom: 170px;
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  gap: 48px;
+}
+
+/* On Services the FAQ follows the dark block, so give it breathing room */
+.service-boundary + .faq {
+  padding-top: 120px;
+}
+
+.faq-list {
+  max-width: 900px;
+  border-top: 1px solid var(--line);
+}
+
+.faq-item {
+  border-bottom: 1px solid var(--line);
+}
+
+.faq-item summary {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+  padding: 24px 0;
+  cursor: pointer;
+  list-style: none;
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.faq-item summary::-webkit-details-marker {
+  display: none;
+}
+
+.faq-item summary::after {
+  content: "+";
+  flex: none;
+  font-size: 26px;
+  font-weight: 300;
+  color: var(--muted);
+  transition: transform 0.2s ease;
+}
+
+.faq-item[open] summary::after {
+  transform: rotate(45deg);
+}
+
+.faq-item p {
+  margin: 0;
+  padding: 0 48px 28px 0;
+  max-width: 680px;
+  color: var(--muted);
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+@media (max-width: 900px) {
+  .faq {
+    grid-template-columns: 1fr;
+    gap: 32px;
+    padding-top: 90px;
+    padding-bottom: 110px;
+  }
+
+  .faq-item summary {
+    font-size: 18px;
+  }
+}
+
+/* =========================================================
+   LEGAL / PRIVACY PAGE
+   ========================================================= */
+
+.legal h2 {
+  margin: 48px 0 12px;
+  font-size: 22px;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  color: var(--ink);
+}
+
+.legal .legal-updated {
+  margin: 0;
+  font-size: 13px;
+}
+
+.legal-updated + h2 {
+  margin-top: 36px;
+}
+
+.legal ul {
+  max-width: 650px;
+  margin: 0 0 28px;
+  padding-left: 22px;
+}
+
+.legal li {
+  margin-bottom: 8px;
+  color: var(--muted);
+  font-size: 19px;
+  line-height: 1.5;
+}
+
+.legal a,
+.form-note a {
+  color: var(--ink);
+  text-decoration: underline;
 }
