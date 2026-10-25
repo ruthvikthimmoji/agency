@@ -1,17 +1,94 @@
 @import "tailwindcss";
 
+
+:root {
+  /* Brand Guidelines v1.0 Palette */
+  --night: #0A0F24;
+  --ivory: #F7F5F0;
+  --cobalt: #2D4BFF;
+  --cobalt-deep: #1B2BA8;
+  --amber: #FFB020;
+  --mist: #EEF0FF;
+  --slate: #5B6075;
+  --line-light: #DAD8D0;
+  --line-dark: #232A47;
+  --success: #1FB886;
+  --error: #E5484D;
+
+  /* Font mapping tied to next/font variables */
+  --font-display: var(--font-sora), sans-serif;
+  --font-body: var(--font-inter), sans-serif;
+  --font-mono: var(--font-jetbrains-mono), monospace;
+}
+
+/* Custom Utilities for the Rough Studios brand */
+.bg-night { background-color: var(--night); }
+.bg-ivory { background-color: var(--ivory); }
+.bg-mist { background-color: var(--mist); }
+.text-night { color: var(--night); }
+.text-ivory { color: var(--ivory); }
+.text-slate { color: var(--slate); }
+.text-cobalt { color: var(--cobalt); }
+.text-amber { color: var(--amber); }
+.border-line-dark { border-color: var(--line-dark); }
+.border-line-light { border-color: var(--line-light); }
+
+.font-display { font-family: var(--font-display); }
+.font-body { font-family: var(--font-body); }
+.font-mono { font-family: var(--font-mono); }
+
+/* Signature Glows & Gradients */
+.hero-glow {
+  background: radial-gradient(circle at 50% 30%, rgba(45, 75, 255, 0.28) 0%, rgba(10, 15, 36, 0) 70%);
+}
+.cta-gradient {
+  background: linear-gradient(135deg, #2D4BFF 0%, #1B2BA8 100%);
+}
+
 /* =========================================================
    ROOT
    ========================================================= */
 
 :root {
-  --bg: #f7f5ef;
-  --surface: #ebe8df;
-  --ink: #11110f;
-  --muted: #727068;
-  --line: #d5d1c7;
-  --accent: #e8ff55;
-  --dark: #151513;
+  /* New Color System */
+  --space-cadet: #1E223D;
+  --space-cadet-deep: #14172B;
+  --space-cadet-border: #2E345C;
+  --gargoyle-gas: #E6D5B7;
+  --sand-mist: #F3EBDD;
+  --sand-border: #D8C3A0;
+  --orange: #F54F1B;
+  --orange-hover: #D83E0E;
+  --slate-subtle: #7A819E;
+
+  --font-display: var(--font-sora), sans-serif;
+  --font-body: var(--font-inter), sans-serif;
+  --font-mono: var(--font-jetbrains-mono), monospace;
+}
+
+/* Background utilities */
+.bg-cadet { background-color: var(--space-cadet); }
+.bg-cadet-deep { background-color: var(--space-cadet-deep); }
+.bg-sand { background-color: var(--gargoyle-gas); }
+.bg-sand-mist { background-color: var(--sand-mist); }
+.bg-orange { background-color: var(--orange); }
+
+/* Text utilities */
+.text-cadet { color: var(--space-cadet); }
+.text-sand { color: var(--gargoyle-gas); }
+.text-orange { color: var(--orange); }
+.text-slate-subtle { color: var(--slate-subtle); }
+
+/* Border utilities */
+.border-cadet { border-color: var(--space-cadet-border); }
+.border-sand { border-color: var(--sand-border); }
+
+/* Signature Radial Glow & Gradient using Orange + Space Cadet */
+.hero-glow {
+  background: radial-gradient(circle at 50% 30%, rgba(245, 79, 27, 0.22) 0%, rgba(30, 34, 61, 0) 70%);
+}
+.cta-gradient {
+  background: linear-gradient(135deg, #F54F1B 0%, #1E223D 100%);
 }
 
 /* =========================================================

@@ -1,17 +1,23 @@
 export const site = {
-  name: "ROUGH.",
-  shortName: "ROUGH.",
+  name: "Rough Studios.",
+  shortName: "Rough Studios.",
+  founder: "Ruthvik P Thimmoji",
   email: "thiimojiruthvik@gmail.com",
+  responsePromise: "Replies within 24 hours",
+  availability: "Booking for November 2026",
   nav: [
-    { label: "Work", href: "/work" },
-    { label: "Services", href: "/services" },
-    { label: "Process", href: "/process" },
+    { label: "Work", href: "#work" },
+    { label: "Services", href: "#services" },
+    { label: "Scorecard", href: "#scorecard" },
+    { label: "Process", href: "#process" },
     { label: "About", href: "/about" },
   ],
   hero: {
-    eyebrow: "Independent product design studio · India + global",
+    status: "Booking Nov 2026",
+    eyebrow: "Product UI / Design Systems / UX Audits",
     title: ["Make the", "mess make", "sense."],
-    body: "I turn rough, inconsistent products into polished, scalable experiences — for founders done patching things together.",
+    body: "Independent product design studio turning fast-growing, inconsistent interfaces into clear, scalable design systems. Led by Ruthvik P Thimmoji with direct designer access.",
+    trustLine: "Fixed-price audits · Documented handoff · Direct access to the designer",
   },
 };
 
@@ -21,36 +27,60 @@ export const work = [
     number: "01",
     title: "SportSea",
     type: "Product UI · 0→1",
-    description: "A multi-role sports booking product spanning player, arena admin and platform admin experiences.",
-    href: "#",
-    tone: "light",
+    tag: "Case Study",
+    description: "A multi-role sports booking platform spanning player, arena admin, and master admin experiences with a unified component system.",
+    href: "/work/sportsea",
+    tone: "dark",
   },
   {
     id: "juzzpay",
     number: "02",
     title: "JuzzPay",
     type: "Fintech · Dashboard",
-    description: "A finance dashboard concept focused on making dense financial information easier to scan and act on.",
-    href: "#",
-    tone: "dark",
+    tag: "Concept & Teardown",
+    description: "A financial dashboard redesign focused on reducing visual clutter and accelerating high-volume transaction scans.",
+    href: "/work/juzzpay",
+    tone: "light",
   },
 ] as const;
 
 export const services = [
-  { number: "01", title: "Product UI Design", short: "Clear, polished interfaces", description: "From flows to high-fidelity product interfaces that feel clear, considered and ready to scale." },
-  { number: "02", title: "Design Systems", short: "Reusable by design", description: "Turn repeated patterns into a component system that creates consistency without slowing the team down." },
-  { number: "03", title: "UX / UI Audit", short: "Find the friction", description: "A focused review of screens, flows and patterns to surface inconsistency, friction and opportunities." },
+  {
+    number: "01",
+    title: "UX / UI Audit",
+    short: "3 to 5 days · Rapid Clarity",
+    price: "From ₹18,000 / $300",
+    description: "A comprehensive teardown of screens, interaction flows, and token friction. You get a prioritized action matrix and redlined Figma recommendations.",
+    featured: true,
+  },
+  {
+    number: "02",
+    title: "Design Systems",
+    short: "2 to 4 weeks · Scalable Tokens & Components",
+    price: "Fixed scope · Inquire",
+    description: "Transforms repeated patterns into a documented Figma token and component library so your engineers build fast without introducing UI debt.",
+    featured: false,
+  },
+  {
+    number: "03",
+    title: "Product UI Design",
+    short: "End-to-End Product Flows",
+    price: "Milestone-based",
+    description: "From structural wireframes to production-grade interfaces with full edge-case coverage and complete developer handoff specs.",
+    featured: false,
+  },
 ] as const;
 
 export const process = [
-  { number: "01", title: "Align", description: "Understand the product, problem and constraints." },
-  { number: "02", title: "Structure", description: "Map the experience and remove unnecessary complexity." },
-  { number: "03", title: "Design", description: "Create the visual language and high-fidelity UI." },
-  { number: "04", title: "Systemize", description: "Turn repeated decisions into reusable components." }
+  { number: "01", title: "Align", description: "Uncover product logic, technical constraints, and key friction points." },
+  { number: "02", title: "Structure", description: "Clean up navigation, eliminate edge case confusion, and wireframe clear user flows." },
+  { number: "03", title: "Design", description: "Engineer the visual language, typography scale, and responsive UI screens." },
+  { number: "04", title: "Systemize", description: "Package atomic components, variants, and design tokens into a ready library." },
+  { number: "05", title: "Document & Handoff", description: "Redlined Figma specs, interactive states, and direct engineering guidance." }
 ] as const;
 
 export const socialLinks = [
   { label: "LinkedIn", href: "https://www.linkedin.com/in/ruthvik-p-thimmoji/" },
-  { label: "Behance", href: "" }, // paste your Behance profile URL
-  { label: "Instagram", href: "" }, // paste your Instagram profile URL, or leave empty to hide it
-].filter((link) => link.href !== "");
+  { label: "Behance", href: "https://www.behance.net/ruthvikthimmoji" },
+  { label: "Instagram", href: "https://www.instagram.com/ruthvikdesigns.co/" },
+];
