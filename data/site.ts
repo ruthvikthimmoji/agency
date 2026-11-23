@@ -19,7 +19,7 @@ export const site = {
   descriptor: "Independent product design studio",
   founder: "Ruthvik P Thimmoji",
   location: "Bengaluru, India",
-  url: "https://agencyv0.vercel.app", // swap for your real domain
+  url: "https://ruthvikstudio.vercel.app", // swap for your real domain
   description:
     "Independent product design studio turning fast-growing, inconsistent interfaces into clear, scalable design systems. Led by Ruthvik P Thimmoji.",
   positioning:
