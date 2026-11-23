@@ -1,14 +1,14 @@
+import { site } from "./site";
+
 export const faqItems = [
   {
-    question:
-      "Why hire a design specialist instead of one agency for design and development?",
+    question: "Why hire a design specialist instead of one agency for design and development?",
     answer:
-      "If your product already has developers, or you plan to hire them, you don't need to pay for build capacity twice. I focus on the design decisions — structure, interface and system — and hand over organized Figma files your developers can build from. If you also need the build, I'll tell you plainly rather than stretch beyond what I do well.",
+      "If your product already has developers, or you plan to hire them, you don't need to pay for build capacity twice. I focus on the design decisions — structure, interface and system — and hand over organised Figma files your developers can build from. If you also need the build, I'll tell you plainly rather than stretch beyond what I do well.",
   },
   {
     question: "Do you write code?",
-    answer:
-      "No. ROUGH. is design only: product UI, design systems and audits. You get organized Figma files with documented components, states and specs that your developers can build from.",
+    answer: `No. ${site.name} is design only: product UI, design systems and audits. You get organised Figma files with documented components, states and specs that your developers can build from.`,
   },
   {
     question: "How much does it cost?",
@@ -28,7 +28,7 @@ export const faqItems = [
   {
     question: "Can you work with my developers?",
     answer:
-      "Yes. Handoff is part of the process: organized files with documented states and specs, so your developers can build without guessing.",
+      "Yes. Handoff is part of the process: organised files with documented states and specs, so your developers can build without guessing.",
   },
   {
     question: "How do revisions work?",
@@ -37,7 +37,6 @@ export const faqItems = [
   },
   {
     question: "Who do you work with?",
-    answer:
-      "Founders and small product teams, roughly 1–15 people, past the MVP stage, whose product has outgrown ad hoc design. I'm based in Bengaluru and work with clients in India and globally.",
+    answer: `Founders and small product teams, roughly 1–15 people, past the MVP stage, whose product has outgrown ad hoc design. I'm based in ${site.location.split(",")[0]} and work with clients in India and globally.`,
   },
 ] as const;

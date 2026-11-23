@@ -1,25 +1,65 @@
+/* =========================================================
+   SINGLE SOURCE OF CONTENT
+   Everything the site says lives here. Change it once,
+   it changes everywhere. (Replaces the old agency.ts.)
+   ========================================================= */
+
 export const site = {
-  name: "Rough Studios.",
-  shortName: "Rough Studios.",
-  founder: "Ruthvik P Thimmoji",
-  email: "thiimojiruthvik@gmail.com",
-  responsePromise: "Replies within 24 hours",
-  availability: "Booking for November 2026",
-  nav: [
-    { label: "Work", href: "#work" },
-    { label: "Services", href: "#services" },
-    { label: "Scorecard", href: "#scorecard" },
-    { label: "Process", href: "#process" },
-    { label: "About", href: "/about" },
-  ],
-  hero: {
-    status: "Booking Nov 2026",
-    eyebrow: "Product UI / Design Systems / UX Audits",
-    title: ["Make the", "mess make", "sense."],
-    body: "Independent product design studio turning fast-growing, inconsistent interfaces into clear, scalable design systems. Led by Ruthvik P Thimmoji with direct designer access.",
-    trustLine: "Fixed-price audits · Documented handoff · Direct access to the designer",
+  // ---- Brand (change `name` here to rename the whole site)
+  name: "Ruthvik’s Studio",
+  // Logo: plain text for now. When your own logo is ready, put the file in
+  // /public/brand (e.g. logo.svg), set `image` to "/brand/logo.svg" and its size.
+  logo: {
+    text: "Ruthvik’s Studio",
+    image: null as string | null,
+    width: 180,
+    height: 32,
   },
-};
+  tagline: "Make the mess make sense.",
+  descriptor: "Independent product design studio",
+  founder: "Ruthvik P Thimmoji",
+  location: "Bengaluru, India",
+  url: "https://agencyv0.vercel.app", // swap for your real domain
+  description:
+    "Independent product design studio turning fast-growing, inconsistent interfaces into clear, scalable design systems. Led by Ruthvik P Thimmoji.",
+  positioning:
+    "I turn rough, inconsistent products into polished, scalable experiences — for founders done patching things together.",
+
+  // ---- Contact
+  email: "thimmojiruthvik@gmail.com",
+  formEndpoint: "https://formspree.io/f/mbgdzwyp",
+  responsePromise: "Replies within 24 hours",
+  availability: "Booking for December 2026",
+
+  // ---- Navigation
+  nav: [
+    { label: "Work", href: "/work" },
+    { label: "Services", href: "/services" },
+    { label: "Process", href: "/process" },
+    { label: "About", href: "/about" },
+    { label: "Contact", href: "/contact" },
+  ],
+  cta: { label: "Start a project", href: "/contact" },
+
+  // ---- Home hero
+  hero: {
+    sheet: "Sheet A1 — Product UI / Design systems / UX audits",
+    title: { lead: "Make the mess\nmake ", accent: "sense." },
+    body: "Independent product design studio turning fast-growing, inconsistent interfaces into clear, scalable design systems. Direct access to the designer, every step.",
+    measure: "Fixed-price audits · Documented handoff · Direct designer access",
+  },
+} as const;
+
+/* ---------- WORK ---------- */
+
+export type WorkKind = "product" | "system" | "audit" | "concept";
+
+export const workFilters: { id: "all" | WorkKind; label: string }[] = [
+  { id: "all", label: "All" },
+  { id: "product", label: "Product UI" },
+  { id: "system", label: "Design systems" },
+  { id: "concept", label: "Concepts" },
+];
 
 export const work = [
   {
@@ -27,60 +67,110 @@ export const work = [
     number: "01",
     title: "SportSea",
     type: "Product UI · 0→1",
-    tag: "Case Study",
-    description: "A multi-role sports booking platform spanning player, arena admin, and master admin experiences with a unified component system.",
+    tag: "Case study",
+    kinds: ["product", "system"] as WorkKind[],
+    description:
+      "A multi-role sports booking platform spanning player, arena admin and master admin experiences, with a unified component system.",
+    visual: "SportSea — player app + arena admin",
+    image: null as string | null, // e.g. "/work/sportsea/cover.png" in /public
     href: "/work/sportsea",
-    tone: "dark",
+    published: true,
+    facts: [
+      { label: "Screens", value: "100+" },
+      { label: "Roles", value: "3" },
+      { label: "Status", value: "Live" },
+    ],
   },
   {
     id: "juzzpay",
     number: "02",
     title: "JuzzPay",
     type: "Fintech · Dashboard",
-    tag: "Concept & Teardown",
-    description: "A financial dashboard redesign focused on reducing visual clutter and accelerating high-volume transaction scans.",
+    tag: "Concept & teardown",
+    kinds: ["concept"] as WorkKind[],
+    description:
+      "A financial dashboard redesign focused on reducing visual clutter and speeding up high-volume transaction scans.",
+    visual: "JuzzPay — transactions dashboard",
+    image: null as string | null,
     href: "/work/juzzpay",
-    tone: "light",
+    published: false, // card shows "Case study coming soon" until this page exists
+    facts: [],
   },
-] as const;
+];
+
+/* ---------- SERVICES ---------- */
 
 export const services = [
   {
-    number: "01",
+    code: "C1.1",
+    slug: "audit",
     title: "UX / UI Audit",
-    short: "3 to 5 days · Rapid Clarity",
-    price: "From ₹18,000 / $300",
-    description: "A comprehensive teardown of screens, interaction flows, and token friction. You get a prioritized action matrix and redlined Figma recommendations.",
-    featured: true,
+    short: "A focused review of friction, inconsistency and interface opportunities.",
+    description:
+      "A structured look at an existing product to find where the experience becomes harder to understand, use or maintain. You get a prioritised action list and redlined Figma recommendations.",
+    timeline: "3–5 days",
+    priceInr: "From ₹18,000",
+    priceUsd: "From $300",
+    per: "fixed price",
+    startHere: true,
+    deliverables: [
+      "Heuristic review",
+      "UI consistency review",
+      "Priority issues",
+      "Annotated findings",
+      "Action recommendations",
+    ],
   },
   {
-    number: "02",
+    code: "C1.2",
+    slug: "design-systems",
     title: "Design Systems",
-    short: "2 to 4 weeks · Scalable Tokens & Components",
-    price: "Fixed scope · Inquire",
-    description: "Transforms repeated patterns into a documented Figma token and component library so your engineers build fast without introducing UI debt.",
-    featured: false,
+    short: "Reusable UI foundations that reduce inconsistency and speed up design decisions.",
+    description:
+      "Turn repeated interface decisions into a documented token and component library your engineers can build on without adding UI debt.",
+    timeline: "Typically 3–5 weeks",
+    priceInr: "Scoped after a brief",
+    priceUsd: "Scoped after a brief",
+    per: "fixed scope",
+    startHere: false,
+    deliverables: ["Design tokens", "Components", "Variants & states", "Patterns", "Usage guidance"],
   },
   {
-    number: "03",
+    code: "C1.3",
+    slug: "product-ui",
     title: "Product UI Design",
-    short: "End-to-End Product Flows",
-    price: "Milestone-based",
-    description: "From structural wireframes to production-grade interfaces with full edge-case coverage and complete developer handoff specs.",
-    featured: false,
+    short: "Clear, polished interfaces for products moving from idea to scale.",
+    description:
+      "From flows and information hierarchy to high-fidelity screens — making complex product experiences feel obvious and consistent, with full edge-case coverage.",
+    timeline: "Typically 3–6 weeks",
+    priceInr: "Milestone-based",
+    priceUsd: "Milestone-based",
+    per: "scoped after a brief",
+    startHere: false,
+    deliverables: [
+      "User flows",
+      "Wireframes",
+      "High-fidelity UI",
+      "Responsive screens",
+      "Organised Figma files with documented states and specs",
+    ],
   },
 ] as const;
 
+/* ---------- PROCESS (positions on the ruler, in cm) ---------- */
+
 export const process = [
-  { number: "01", title: "Align", description: "Uncover product logic, technical constraints, and key friction points." },
-  { number: "02", title: "Structure", description: "Clean up navigation, eliminate edge case confusion, and wireframe clear user flows." },
-  { number: "03", title: "Design", description: "Engineer the visual language, typography scale, and responsive UI screens." },
-  { number: "04", title: "Systemize", description: "Package atomic components, variants, and design tokens into a ready library." },
-  { number: "05", title: "Document & Handoff", description: "Redlined Figma specs, interactive states, and direct engineering guidance." }
+  { number: "01", at: "0 cm", title: "Align", description: "Uncover product logic, technical constraints and the real friction points." },
+  { number: "02", at: "20 cm", title: "Structure", description: "Clean up navigation, remove edge-case confusion and wireframe clear user flows." },
+  { number: "03", at: "40 cm", title: "Design", description: "Shape the visual language, type scale and responsive UI screens." },
+  { number: "04", at: "60 cm", title: "Systemise", description: "Package components, variants and design tokens into a ready library." },
+  { number: "05", at: "80 cm", title: "Document & hand off", description: "Redlined Figma specs, interactive states and direct guidance for your engineers." },
 ] as const;
+
+/* ---------- SOCIAL (a link is hidden while its href is empty) ---------- */
 
 export const socialLinks = [
   { label: "LinkedIn", href: "https://www.linkedin.com/in/ruthvik-p-thimmoji/" },
   { label: "Behance", href: "https://www.behance.net/ruthvikthimmoji" },
   { label: "Instagram", href: "https://www.instagram.com/ruthvikdesigns.co/" },
-];
+].filter((link) => link.href !== "");

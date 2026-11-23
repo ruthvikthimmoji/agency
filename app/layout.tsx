@@ -1,42 +1,48 @@
-import type { Metadata } from "next";
-import { Sora, Inter, JetBrains_Mono } from "next/font/google";
+import type { Metadata, Viewport } from "next";
+import { Instrument_Serif, Geist, Geist_Mono } from "next/font/google";
+import { site } from "@/data/site";
 import "./globals.css";
 
-const sora = Sora({
+const instrumentSerif = Instrument_Serif({
   subsets: ["latin"],
-  weight: ["700", "800"],
-  variable: "--font-sora",
+  weight: "400",
+  style: ["normal", "italic"],
+  variable: "--font-instrument-serif",
   display: "swap",
 });
 
-const inter = Inter({
+const geist = Geist({
   subsets: ["latin"],
-  weight: ["400", "500", "600"],
-  variable: "--font-inter",
+  weight: ["300", "400", "500"],
+  variable: "--font-geist",
   display: "swap",
 });
 
-const jetbrainsMono = JetBrains_Mono({
+const geistMono = Geist_Mono({
   subsets: ["latin"],
-  weight: ["500"],
-  variable: "--font-jetbrains-mono",
+  weight: ["400", "500"],
+  variable: "--font-geist-mono",
   display: "swap",
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://agencyv0.vercel.app"),
+  metadataBase: new URL(site.url),
   title: {
-    default: "Rough Studios. — Clarity, built to scale.",
-    template: "%s | Rough Studios.",
+    default: `${site.name} — ${site.tagline}`,
+    template: `%s | ${site.name}`,
   },
-  description:
-    "Independent product design studio turning fast-growing, inconsistent interfaces into clear, scalable design systems. Led by Ruthvik P Thimmoji.",
-  authors: [{ name: "Ruthvik P Thimmoji" }],
+  description: site.description,
+  authors: [{ name: site.founder }],
   openGraph: {
-    title: "Rough Studios. — Make the mess make sense.",
-    description: "Product UI, design systems and UX audits for founders who've outgrown patchwork design.",
+    title: `${site.name} — ${site.tagline}`,
+    description: site.description,
     type: "website",
+    siteName: site.name,
   },
+};
+
+export const viewport: Viewport = {
+  themeColor: "#173c2f",
 };
 
 export default function RootLayout({
@@ -47,9 +53,13 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${sora.variable} ${inter.variable} ${jetbrainsMono.variable} scroll-smooth`}
+      data-scroll-behavior="smooth"
+      className={`${instrumentSerif.variable} ${geist.variable} ${geistMono.variable}`}
     >
-      <body className="bg-night text-ivory font-body antialiased selection:bg-cobalt selection:text-white">
+      <body className="mat">
+        <a href="#main" className="skip-link">
+          Skip to content
+        </a>
         {children}
       </body>
     </html>

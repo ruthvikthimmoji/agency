@@ -1,27 +1,14 @@
-import { ArrowUpRight } from "lucide-react";
+import type { Metadata } from "next";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import SectionHeading from "@/components/SectionHeading";
+import ProcessSteps from "@/components/ProcessSteps";
+import CtaBand from "@/components/CtaBand";
 
-const steps = [
-  ["01", "Align", "Understand the product, problem, audience and constraints."],
-  ["02", "Structure", "Map the experience and remove unnecessary complexity."],
-  ["03", "Design", "Create the visual language and high-fidelity interface."],
-  [
-    "04",
-    "Systemize",
-    "Turn repeated decisions into reusable components and patterns.",
-  ],
-  [
-    "05",
-    "Handoff",
-    "Deliver organized files and decisions the team can actually use.",
-  ],
-] as const;
-
-export const metadata = {
+export const metadata: Metadata = {
   title: "Process",
   description:
-    "A five-step process — align, structure, design, systemize, handoff — built to reduce ambiguity and keep product decisions visible.",
+    "A five-step process — align, structure, design, systemise, hand off — built to reduce ambiguity and keep product decisions visible.",
 };
 
 export default function ProcessPage() {
@@ -29,36 +16,29 @@ export default function ProcessPage() {
     <>
       <Navbar />
 
-      <main>
-        <section className="inner-hero section-shell">
-          <div className="section-index">01 / PROCESS</div>
-          <div className="inner-hero-grid">
-            <h1>Structure first. Pixels second.</h1>
-            <p>
-              A simple process designed to reduce ambiguity, keep decisions
-              visible and move the product forward.
-            </p>
-          </div>
+      <main id="main">
+        <section className="page-hero shell">
+          <SectionHeading
+            level={1}
+            number="Sheet P"
+            eyebrow="Process"
+            title={"Structure first.\nPixels second."}
+            accentWord="Pixels second."
+            blade
+            description="A simple process designed to reduce ambiguity, keep decisions visible and move the product forward."
+          />
         </section>
 
-        <section className="process-page-list section-shell">
-          {steps.map(([number, title, description]) => (
-            <article className="process-page-item" key={number}>
-              <span className="section-index">{number}</span>
-              <h2>{title}</h2>
-              <p>{description}</p>
-            </article>
-          ))}
+        <section className="shell">
+          <ProcessSteps variant="list" />
         </section>
 
-        <section className="inner-cta section-shell">
-          <p className="section-index">02 / NEXT</p>
-          <h2>Have a messy product?</h2>
-          <p>Bring the current state. I&apos;ll work from there.</p>
-          <a className="contact-button" href="/contact">
-            Start a project <ArrowUpRight size={19} />
-          </a>
-        </section>
+        <CtaBand
+          lead={"Have a\n"}
+          accent="messy product?"
+          body="Bring the current state. I'll work from there."
+          label="Next"
+        />
       </main>
 
       <Footer />

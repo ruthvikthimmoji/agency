@@ -1,14 +1,18 @@
-import { ArrowUpRight, Check } from "lucide-react";
+import type { Metadata } from "next";
+import Link from "next/link";
+import { Check } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import { agency } from "@/data/agency";
-  import Faq from "@/components/Faq";
+import SectionHeading from "@/components/SectionHeading";
+import Faq from "@/components/Faq";
+import CtaBand from "@/components/CtaBand";
+import { services, site } from "@/data/site";
 
-export const metadata = {
-  // The layout adds " | ROUGH." automatically
-  title: "Services — Product UI, Design Systems, UX/UI Audit",
+export const metadata: Metadata = {
+  // The layout adds " | <brand>" automatically
+  title: "Services — UX/UI Audit, Design Systems, Product UI",
   description:
-    "Three focused services: product UI design, design systems and UX/UI audits for founders whose product is getting harder to manage.",
+    "Three focused services: UX/UI audits, design systems and product UI design for founders whose product is getting harder to manage.",
 };
 
 export default function ServicesPage() {
@@ -16,94 +20,92 @@ export default function ServicesPage() {
     <>
       <Navbar />
 
-      <main>
-        <section className="inner-hero section-shell">
-          <div className="section-index">01 / SERVICES</div>
-          <div className="inner-hero-grid">
-            <h1>Design work that makes complexity easier to manage.</h1>
-            <p>{agency.positioning}</p>
-          </div>
+      <main id="main">
+        <section className="page-hero shell">
+          <SectionHeading
+            level={1}
+            number="Sheet C"
+            eyebrow="Services & pricing"
+            title={"Design work that makes\ncomplexity easier to manage."}
+            accentWord="easier to manage."
+            blade
+            description={site.positioning}
+          />
         </section>
 
-        <section className="service-detail-list section-shell">
-          {agency.services.map((service) => (
-            <article className="service-detail" key={service.number}>
-              <div className="service-detail-top">
-                <span className="section-index">{service.number}</span>
-                <span className="service-detail-kicker">
-                  {service.startHere && (
-                    <span className="start-here">Start here</span>
-                  )}
-                  {service.title}
-                </span>
+        <section className="shell service-details" aria-label="Services">
+          {services.map((s) => (
+            <article key={s.slug} id={s.slug} className="service-detail">
+              <div className="service-detail-head">
+                <span className="label label-blade">{s.code}</span>
+                {s.startHere && <span className="start-here">Start here</span>}
               </div>
 
               <div className="service-detail-grid">
                 <div>
-                  <h2>{service.title}</h2>
-                  <p className="service-detail-short">{service.short}</p>
+                  <h2 className="h2">{s.title}</h2>
+                  <p className="lead service-detail-short">{s.short}</p>
                 </div>
-                <div>
-                  <p className="service-detail-description">
-                    {service.description}
-                  </p>
+
+                <div className="service-detail-side">
+                  <p className="body">{s.description}</p>
 
                   <dl className="service-meta">
                     <div>
-                      <dt>Timeline</dt>
-                      <dd>{service.timeline}</dd>
+                      <dt className="label label-sm">Timeline</dt>
+                      <dd>{s.timeline}</dd>
                     </div>
                     <div>
-                      <dt>Investment</dt>
-                      <dd>{service.investment}</dd>
+                      <dt className="label label-sm">Investment</dt>
+                      <dd>
+                        {s.priceInr}
+                        {s.priceUsd !== s.priceInr && <span className="muted"> · {s.priceUsd}</span>}
+                      </dd>
                     </div>
                   </dl>
 
-                  <div className="deliverables">
-                    {service.deliverables.map((item) => (
-                      <div key={item}>
-                        <Check size={15} />
-                        <span>{item}</span>
-                      </div>
+                  <ul className="deliverables">
+                    {s.deliverables.map((d) => (
+                      <li key={d}>
+                        <Check size={15} strokeWidth={1.6} aria-hidden="true" />
+                        {d}
+                      </li>
                     ))}
-                  </div>
+                  </ul>
+
+                  <Link href="/contact" className={`btn ${s.startHere ? "btn-primary" : "btn-secondary"}`}>
+                    {s.startHere ? "Book an audit →" : "Send a brief →"}
+                  </Link>
                 </div>
               </div>
             </article>
           ))}
         </section>
 
-        <section className="service-boundary">
-          <div className="section-shell service-boundary-inner">
-            <div className="section-index">02 / FOCUS</div>
+        <section className="boundary mat-deep">
+          <div className="shell split">
+            <p className="label">02 — Focus</p>
             <div>
-              <h2>Deliberately narrow.</h2>
-              <p>
-                I don&apos;t offer development, formal UX research, usability
-                testing or product strategy consulting. Doing fewer things
-                properly is the point.
-                <br />
-                <br />
-                Design only. Organized files your developers can build from.
+              <h2 className="h1">
+                Deliberately <em className="accent">narrow.</em>
+              </h2>
+              <p className="lead boundary-copy">
+                I don&apos;t offer development, formal UX research, usability testing or product strategy
+                consulting. Doing fewer things properly is the point. Design only — organised files your
+                developers can build from.
               </p>
             </div>
           </div>
         </section>
 
-       <Faq />
-
-
-        <section className="inner-cta section-shell">
-          <p className="section-index">03 / START</p>
-          <h2>Not sure what you need?</h2>
-          <p>
-            Send over the product, problem or current state. I can start from
-            there.
-          </p>
-          <a className="contact-button" href="/contact">
-            Start a project <ArrowUpRight size={19} />
-          </a>
+        <section className="section shell">
+          <div className="split">
+            <SectionHeading number="03" eyebrow="Questions" title="Before we start." accentWord="start." />
+            <Faq />
+          </div>
         </section>
+
+        <CtaBand lead={"Not sure what\nyou "} accent="need?" body="Send over the product, problem or current state. I can start from there." />
       </main>
 
       <Footer />
