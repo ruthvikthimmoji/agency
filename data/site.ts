@@ -7,19 +7,13 @@
 export const site = {
   // ---- Brand (change `name` here to rename the whole site)
   name: "Ruthvik’s Studio",
-  // Logo: plain text for now. When your own logo is ready, put the file in
-  // /public/brand (e.g. logo.svg), set `image` to "/brand/logo.svg" and its size.
-  logo: {
-    text: "Ruthvik’s Studio",
-    image: null as string | null,
-    width: 180,
-    height: 32,
-  },
+  // Logo: die-cut R mark + the studio name. The mark lives in components/LogoMark.tsx.
+  logo: { text: "Ruthvik’s Studio" },
   tagline: "Make the mess make sense.",
   descriptor: "Independent product design studio",
   founder: "Ruthvik P Thimmoji",
   location: "Bengaluru, India",
-  url: "https://ruthvikstudio.vercel.app", // swap for your real domain
+  url: "https://agencyv0.vercel.app", // swap for your real domain
   description:
     "Independent product design studio turning fast-growing, inconsistent interfaces into clear, scalable design systems. Led by Ruthvik P Thimmoji.",
   positioning:

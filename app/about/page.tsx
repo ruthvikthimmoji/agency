@@ -11,8 +11,8 @@ export const metadata: Metadata = {
   description: `${site.name} is an independent product design studio run by ${site.founder} in ${site.location}, working with founders worldwide.`,
 };
 
-// Add a photo to /public (e.g. /about/portrait.jpg) and put the path here.
-const PORTRAIT: string | null = null;
+// Portrait in /public/about. Swap the file to change it.
+const PORTRAIT: string | null = "/about/portrait.jpg";
 
 const RULES = [
   { code: "Rule 01", title: "Structure first.", body: "Flows and hierarchy are agreed before anything gets polished, so the polish never has to be redone." },
@@ -43,7 +43,13 @@ export default function AboutPage() {
           <figure className="polaroid paper">
             <div className="polaroid-photo paper-inset">
               {PORTRAIT ? (
-                <Image src={PORTRAIT} alt={`Portrait of ${site.founder}`} fill sizes="440px" />
+                <Image
+                  src={PORTRAIT}
+                  alt={`Illustrated portrait of ${site.founder} in a beanie and pale green jacket, standing in the hills at sunrise`}
+                  fill
+                  sizes="(max-width: 900px) 90vw, 440px"
+                  priority
+                />
               ) : (
                 <span>[Portrait — natural light, at your desk]</span>
               )}

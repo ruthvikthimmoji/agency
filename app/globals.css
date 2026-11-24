@@ -608,24 +608,35 @@ svg {
 
 .blink { animation: blink 2.4s ease-in-out infinite; }
 
-/* ---------- Wordmark (logo) ---------- */
+/* ---------- Logo (die-cut mark + name) ---------- */
+
+.logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--chalk);
+}
+
+.logo-mark {
+  flex: none;
+  color: currentColor;
+  transition: transform var(--dur) var(--ease-out);
+}
+
+.brand:hover .logo-mark { transform: rotate(-4deg); }
 
 .wordmark {
   font-family: var(--font-display);
-  font-size: 30px;
+  font-size: 28px;
   line-height: 1;
   letter-spacing: -0.015em;
-  color: var(--chalk);
   white-space: nowrap;
 }
 
-.wordmark-lg { font-size: clamp(44px, 5vw, 72px); }
+.logo-lg { gap: 20px; }
+.logo-lg .wordmark { font-size: clamp(40px, 4.6vw, 64px); }
 
-.paper .wordmark { color: var(--ink); }
-
-.wordmark-image { display: block; height: auto; }
-.wordmark-image-md { max-height: 36px; width: auto; }
-.wordmark-image-lg { max-height: 72px; width: auto; }
+.paper .logo { color: var(--ink); }
 
 /* ---------- Header / Navbar ---------- */
 
@@ -660,10 +671,11 @@ svg {
   gap: 10px;
 }
 
-.brand:hover .wordmark { color: var(--chalk); }
+.brand:hover { color: var(--chalk); }
 
 @media (max-width: 400px) {
-  .site-header .wordmark { font-size: 26px; }
+  .site-header .wordmark { font-size: 24px; }
+  .site-header .logo { gap: 10px; }
 }
 
 .site-nav {

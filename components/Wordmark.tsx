@@ -1,28 +1,15 @@
-import Image from "next/image";
 import { site } from "@/data/site";
+import LogoMark from "./LogoMark";
 
 /**
- * The logo.
- * Right now: the studio name set in the display serif.
- * Later: set `logo.image` in data/site.ts to your logo file and it is used everywhere instead.
+ * Full logo: die-cut R mark + "Ruthvik’s Studio".
+ * size="lg" is the big footer version.
  */
 export default function Wordmark({ size = "md" }: { size?: "md" | "lg" }) {
-  const { text, image, width, height } = site.logo;
-
-  if (image) {
-    const scale = size === "lg" ? 2 : 1;
-    return (
-      <Image
-        src={image}
-        alt={site.name}
-        width={width * scale}
-        height={height * scale}
-        className={`wordmark-image wordmark-image-${size}`}
-        unoptimized
-        priority={size === "md"}
-      />
-    );
-  }
-
-  return <span className={`wordmark wordmark-${size}`}>{text}</span>;
+  return (
+    <span className={`logo logo-${size}`}>
+      <LogoMark size={size === "lg" ? 64 : 30} />
+      <span className="wordmark">{site.logo.text}</span>
+    </span>
+  );
 }
