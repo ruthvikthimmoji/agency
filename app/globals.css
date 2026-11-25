@@ -2019,3 +2019,90 @@ div.work-card .work-card-cta {
 }
 
 .case-quote blockquote { margin: 0 0 20px; }
+
+/* ---------- SportSea case study (real content) ---------- */
+
+.case-live { margin-top: 28px; }
+
+.case-img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 2px;
+}
+
+.case-gallery {
+  display: grid;
+  gap: clamp(72px, 9vw, 120px);
+}
+
+.case-gallery-item {
+  display: grid;
+  gap: 28px;
+}
+
+.case-gallery-text {
+  display: grid;
+  grid-template-columns: minmax(140px, 0.3fr) minmax(0, 0.7fr);
+  gap: 8px 48px;
+  align-items: baseline;
+  max-width: 1040px;
+}
+
+.case-gallery-text .label { grid-row: span 2; }
+
+@media (max-width: 900px) {
+  .case-gallery-text { grid-template-columns: 1fr; }
+  .case-gallery-text .label { grid-row: auto; }
+}
+
+.goal-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  border-top: 1px solid var(--chalk);
+}
+
+.goal-row {
+  display: grid;
+  grid-template-columns: 64px minmax(0, 0.9fr) minmax(0, 1fr);
+  gap: 12px 40px;
+  align-items: baseline;
+  padding: 26px 0;
+  border-bottom: 1px solid var(--grid);
+}
+
+.goal-row .h4,
+.goal-row .body { margin: 0; }
+
+@media (max-width: 900px) {
+  .goal-row { grid-template-columns: 48px minmax(0, 1fr); }
+  .goal-row .body { grid-column: 2; }
+}
+
+.principle-title { margin: 0; font-size: clamp(22px, 2.2vw, 28px); }
+.principle-body { margin: 0; max-width: 380px; text-align: right; }
+
+@media (max-width: 600px) {
+  .principle-body { text-align: left; }
+}
+
+.audit-table {
+  border-top: 1px solid var(--chalk);
+}
+
+.audit-row {
+  display: grid;
+  grid-template-columns: minmax(0, 0.8fr) minmax(0, 1fr) minmax(0, 1fr);
+  gap: 16px;
+  padding: 16px 0;
+  border-bottom: 1px solid var(--grid);
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.audit-area { color: var(--chalk); }
+.audit-before { color: var(--grid); text-decoration: line-through; text-decoration-color: rgba(157, 176, 162, 0.6); }
+.audit-after { color: var(--blade); }
+
+.audit-head { padding-top: 0; padding-bottom: 12px; }

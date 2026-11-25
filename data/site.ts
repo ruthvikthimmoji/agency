@@ -65,8 +65,8 @@ export const work = [
     kinds: ["product", "system"] as WorkKind[],
     description:
       "A multi-role sports booking platform spanning player, arena admin and master admin experiences, with a unified component system.",
-    visual: "SportSea — player app + arena admin",
-    image: null as string | null, // e.g. "/work/sportsea/cover.png" in /public
+       visual: "SportSea — web landing page",
+    image: "/work/sportsea/landing.jpg" as string | null,
     href: "/work/sportsea",
     published: true,
     facts: [
