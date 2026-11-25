@@ -61,7 +61,11 @@ export default function WorkCard({
             sizes={feature ? "(max-width: 900px) 100vw, 640px" : "(max-width: 900px) 100vw, 420px"}
           />
         ) : (
-          <span>[{visual ?? "Cover visual"}]</span>
+          // No screenshot yet: a typographic cover instead of an empty box
+          <span className="work-cover" aria-hidden="true">
+            <span className="work-cover-title">{title}</span>
+            {visual && <span className="work-cover-sub">{visual}</span>}
+          </span>
         )}
       </div>
 
